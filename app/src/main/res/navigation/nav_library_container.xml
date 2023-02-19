@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/libraryFragment">
+
+
+    <fragment
+        android:id="@+id/libraryFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.libraryFragmentScreens.LibraryFragment"
+        android:label="fragment_library"
+        tools:layout="@layout/fragment_library" >
+        <action
+            android:id="@+id/action_libraryFragment_to_userProfileFragment"
+            app:destination="@id/userProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/library_artistDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.ArtistDetailsFragment"
+        android:label="fragment_artist_details"
+        tools:layout="@layout/fragment_artist_details" />
+    <fragment
+        android:id="@+id/library_albumDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.AlbumDetailsFragment"
+        android:label="fragment_album_details"
+        tools:layout="@layout/fragment_album_details" />
+    <fragment
+        android:id="@+id/library_playlistDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.PlaylistDetailsFragment"
+        android:label="PlaylistDetailsFragment" />
+    <fragment
+        android:id="@+id/userProfileFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.UserProfileFragment"
+        android:label="fragment_user_profile"
+        tools:layout="@layout/fragment_user_profile" />
+</navigation>

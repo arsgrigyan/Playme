@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragment">
+
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.homeFragmentScreens.HomeFragment"
+        android:label="fragment_home"
+        tools:layout="@layout/fragment_home" />
+    <fragment
+        android:id="@+id/home_artistDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.ArtistDetailsFragment"
+        android:label="fragment_artist_details"
+        tools:layout="@layout/fragment_artist_details" />
+    <fragment
+        android:id="@+id/home_albumDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.AlbumDetailsFragment"
+        android:label="fragment_album_details"
+        tools:layout="@layout/fragment_album_details" />
+    <fragment
+        android:id="@+id/home_playlistDetailsFragment"
+        android:name="com.southernsunrise.playme.fragments.browseFragments.PlaylistDetailsFragment"
+        android:label="PlaylistDetailsFragment"
+        tools:layout="@layout/fragment_playlist_details"/>
+</navigation>

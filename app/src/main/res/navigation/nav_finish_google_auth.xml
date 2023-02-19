@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_finish_google_auth"
+    app:startDestination="@id/createAccountThirdScreenFragment2">
+
+    <fragment
+        android:id="@+id/createAccountThirdScreenFragment2"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.registerScreens.CreateAccountThirdScreenFragment"
+        android:label="fragment_create_account_third_screen"
+        tools:layout="@layout/fragment_create_account_third_screen" >
+        <action
+            android:id="@+id/action_createAccountThirdScreenFragment2_to_createAccountFourthScreenFragment2"
+            app:destination="@id/createAccountFourthScreenFragment2"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_enter_from_left"
+            app:popExitAnim="@anim/anim_exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFourthScreenFragment2"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.registerScreens.CreateAccountFourthScreenFragment"
+        android:label="fragment_create_account_fourth_screen"
+        tools:layout="@layout/fragment_create_account_fourth_screen" >
+        <action
+            android:id="@+id/action_createAccountFourthScreenFragment2_to_createAccountFifthScreenFragment2"
+            app:destination="@id/createAccountFifthScreenFragment2"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_enter_from_left"
+            app:popExitAnim="@anim/anim_exit_to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/createAccountFifthScreenFragment2"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.registerScreens.CreateAccountFifthScreenFragment"
+        android:label="fragment_create_account_fifth_screen"
+        tools:layout="@layout/fragment_create_account_fifth_screen" />
+</navigation>

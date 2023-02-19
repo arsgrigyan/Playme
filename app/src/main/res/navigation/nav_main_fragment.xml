@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/homeFragmentContainer">
+
+
+    <fragment
+        android:id="@+id/homeFragmentContainer"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.homeFragmentScreens.HomeFragmentContainer"
+        android:label="fragment_home_container"
+        tools:layout="@layout/fragment_home_container" />
+    <fragment
+        android:id="@+id/searchFragmentContainer"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.searchFragmentScreens.SearchFragmentContainer"
+        android:label="fragment_search_container"
+        tools:layout="@layout/fragment_search_container" />
+    <fragment
+        android:id="@+id/libraryFragmentContainer"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.libraryFragmentScreens.LibraryFragmentContainer"
+        android:label="fragment_library_container"
+        tools:layout="@layout/fragment_library_container" />
+
+</navigation>

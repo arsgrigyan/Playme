@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="transparent">#00FFFFFF</color>
+    <color name="semitransparent">#4D000000</color>
+    <color name="light_grey">#CBFFFFFF</color>
+    <color name="dark_layer_state_loading">#65000000</color>
+    <color name="color_view_on_pressed_dark_forground">#6D121212</color>
+    <color name="color_view_on_pressed_light_forground">#66828282</color>
+    <color name="button_disabled_foreground">#99000000</color>
+    <color name="mtrl_textinput_default_box_stroke_color" tools:override="true">@color/white</color>
+    <color name="color_app_main_screens_background">#121212</color>
+    <color name="player_buttons_tint_light">#F5FFFFFF</color>
+    <color name="color_grey_default_ctl">#4D4D4D</color>
+</resources>

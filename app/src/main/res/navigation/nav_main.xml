@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/splashScreenFragment">
+
+    <fragment
+        android:id="@+id/getStartedFragment"
+        android:name="com.southernsunrise.playme.fragments.getStartedScreens.GetStartedFragment"
+        android:label="fragment_get_started"
+        tools:layout="@layout/fragment_get_started">
+        <action
+            android:id="@+id/action_getStartedFragment_to_loginForgotPasswordFragment"
+            app:destination="@id/loginForgotPasswordFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_enter_from_left"
+            app:popExitAnim="@anim/anim_exit_to_right"
+
+            />
+        <action
+            android:id="@+id/action_getStartedFragment_to_registerFragment"
+            app:destination="@id/registerFragment"
+            app:enterAnim="@anim/anim_enter_from_right"
+            app:exitAnim="@anim/anim_exit_to_left"
+            app:popEnterAnim="@anim/anim_enter_from_left"
+            app:popExitAnim="@anim/anim_exit_to_right" />
+        <action
+            android:id="@+id/action_getStartedFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+        <action
+            android:id="@+id/action_getStartedFragment_to_finishGoogleAuthFragment"
+            app:destination="@id/finishGoogleAuthFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_playerFragment"
+            app:destination="@id/playerFragment"
+            app:enterAnim="@anim/anim_fade_in_bottom_to_top"
+            app:popExitAnim="@anim/anim_exit_to_bottom" />
+    </fragment>
+    <fragment
+        android:id="@+id/splashScreenFragment"
+        android:name="com.southernsunrise.playme.fragments.getStartedScreens.SplashScreenFragment"
+        android:label="fragment_flash_screen"
+        tools:layout="@layout/fragment_splash_screen">
+        <action
+            android:id="@+id/action_flashScreenFragment_to_greetFragment"
+            app:destination="@id/getStartedFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_flashScreenFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/splashScreenFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/playerFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.PlayerFragment"
+        android:label="fragment_player"
+        tools:layout="@layout/fragment_player" />
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.registerScreens.RegisterFragment"
+        android:label="fragment_register"
+        tools:layout="@layout/fragment_register" >
+        <action
+            android:id="@+id/action_registerFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginForgotPasswordFragment"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.loginScreens.LoginForgotPasswordFragment"
+        android:label="fragment_login_forgot_password"
+        tools:layout="@layout/fragment_login_forgot_password" >
+        <action
+            android:id="@+id/action_loginForgotPasswordFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/finishGoogleAuthFragment"
+        android:name="com.southernsunrise.playme.fragments.authenticationScreens.registerScreens.FinishGoogleAuthFragment"
+        android:label="fragment_finish_google_auth"
+        tools:layout="@layout/fragment_finish_google_auth" >
+        <action
+            android:id="@+id/action_finishGoogleAuthFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@id/finishGoogleAuthFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>

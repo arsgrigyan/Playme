@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/genresFragment">
+
+    <fragment
+        android:id="@+id/genresFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.searchFragmentScreens.GenresFragment"
+        android:label="fragment_genres"
+        tools:layout="@layout/fragment_genres">
+        <action
+            android:id="@+id/action_genresFragment_to_searchResultsFragment"
+            app:destination="@id/searchResultsFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/genresFragment"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/searchResultsFragment"
+        android:name="com.southernsunrise.playme.fragments.mainFragmentScreens.searchFragmentScreens.SearchResultsFragment"
+        android:label="fragment_search_results"
+        tools:layout="@layout/fragment_search_results">
+        <action
+            android:id="@+id/action_searchResultsFragment_to_genresFragment"
+            app:destination="@id/genresFragment"
+            app:popUpTo="@id/searchResultsFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+</navigation>
