@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.widget.ImageButton
 import android.widget.RadioGroup
 import android.widget.TextView
+import androidx.core.view.isGone
 import androidx.core.view.isVisible
 import androidx.navigation.fragment.findNavController
 import com.southernsunrise.playme.R
@@ -123,14 +124,14 @@ class HomeFragment : Fragment() {
             if (backgroundVisible) {
                 loadingBackground.isVisible = true
             } else {
-                loadingBackground.animate()
-                    .alpha(0f)
-                    .setDuration(250L)
-                    .setListener(object : AnimatorListenerAdapter() {
-                        override fun onAnimationEnd(animation: Animator) {
-                            it.bgDarkLoading.visibility = View.GONE
-                        }
-                    })
+                   loadingBackground.animate()
+                       .alpha(0f)
+                       .setDuration(250L)
+                       .setListener(object : AnimatorListenerAdapter() {
+                           override fun onAnimationEnd(animation: Animator) {
+                               it.bgDarkLoading.visibility = View.GONE
+                           }
+                       })
             }
 
         }

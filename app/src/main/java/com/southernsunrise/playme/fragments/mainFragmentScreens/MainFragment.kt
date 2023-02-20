@@ -26,6 +26,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.southernsunrise.playme.R
 import com.southernsunrise.playme.databinding.FragmentMainBinding
 import com.southernsunrise.playme.fragments.mainFragmentScreens.searchFragmentScreens.SearchFragment
+import com.southernsunrise.playme.utilities.Helper.getBrowseNavOptions
 
 
 class MainFragment() : Fragment() {
@@ -61,8 +62,36 @@ class MainFragment() : Fragment() {
         popupMenu.inflate(R.menu.menu_main_fragment_bottom_nav_bar)
         val menu = popupMenu.menu
         navController = fragmentContainerView.findNavController()
-        navController.let {
-            bottomNavigationBar.setupWithNavController(it)
+        /* navController.let {
+             bottomNavigationBar.setupWithNavController(it)
+         }
+
+         */
+
+        bottomNavigationBar.setOnNavigationItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.homeFragmentContainer -> {
+                    navController.navigate(R.id.homeFragmentContainer, null, getBrowseNavOptions())
+                }
+                R.id.searchFragmentContainer -> {
+                    navController.navigate(
+                        R.id.searchFragmentContainer,
+                        null,
+                        getBrowseNavOptions()
+                    )
+                }
+                R.id.libraryFragmentContainer -> {
+                    navController.navigate(
+                        R.id.libraryFragmentContainer,
+                        null,
+                        getBrowseNavOptions()
+                    )
+                }
+            }
+            true
+        }
+        bottomNavigationBar.setOnItemReselectedListener {
+            return@setOnItemReselectedListener
         }
 
     }

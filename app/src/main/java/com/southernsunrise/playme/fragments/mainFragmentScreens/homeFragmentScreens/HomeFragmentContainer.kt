@@ -10,6 +10,7 @@ import androidx.navigation.NavOptions
 import androidx.navigation.findNavController
 import com.southernsunrise.playme.R
 import com.southernsunrise.playme.databinding.FragmentHomeContainerBinding
+import com.southernsunrise.playme.utilities.Helper
 
 class HomeFragmentContainer : Fragment() {
 
@@ -27,16 +28,7 @@ class HomeFragmentContainer : Fragment() {
 
     fun navigateTo(destinationId: Int, arguments: Bundle) {
         binding?.containerHomeFragmentContainer?.findNavController()
-            ?.navigate(destinationId, arguments, getNavOptions())
-    }
-
-    private fun getNavOptions(): NavOptions {
-        return NavOptions.Builder()
-            .setEnterAnim(R.anim.anim_fade_in)
-            .setExitAnim(R.anim.anim_fade_out)
-            .setPopEnterAnim(R.anim.anim_fade_in)
-            .setPopExitAnim(R.anim.anim_fade_out)
-            .build()
+            ?.navigate(destinationId, arguments, Helper.getBrowseNavOptions())
     }
 
 }

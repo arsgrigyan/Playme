@@ -18,6 +18,7 @@ import androidx.core.text.bold
 import androidx.core.text.color
 import androidx.core.widget.NestedScrollView
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavOptions
 import androidx.palette.graphics.Palette
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.auth.FirebaseUser
@@ -388,6 +389,15 @@ object Helper {
         val baos = ByteArrayOutputStream()
         this.compress(Bitmap.CompressFormat.PNG, 100, baos)
         return baos.toByteArray()
+    }
+
+    fun getBrowseNavOptions(): NavOptions {
+        return NavOptions.Builder()
+            .setEnterAnim(R.anim.anim_fade_in)
+            .setExitAnim(R.anim.anim_fade_out)
+            .setPopEnterAnim(R.anim.anim_fade_in)
+            .setPopExitAnim(R.anim.anim_fade_out)
+            .build()
     }
 
 

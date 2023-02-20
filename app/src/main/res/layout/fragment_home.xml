@@ -9,6 +9,7 @@
     tools:context=".fragments.mainFragmentScreens.homeFragmentScreens.HomeFragment">
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/col_home"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         app:layout_constraintTop_toTopOf="parent">
@@ -74,10 +75,10 @@
                             android:id="@+id/ib_settings"
                             android:layout_width="0dp"
                             android:layout_height="0dp"
+                            android:background="@color/transparent"
+                            android:scaleType="center"
                             android:scaleX="1.2"
                             android:scaleY="1.2"
-                            android:scaleType="center"
-                            android:background="@color/transparent"
                             android:src="@drawable/ic_settings"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="1:1"
@@ -95,8 +96,8 @@
                             android:paddingBottom="0dp"
                             android:text="@string/goodafternoon"
                             android:textColor="@color/white"
-                            android:textStyle="bold"
                             android:textSize="24sp"
+                            android:textStyle="bold"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintDimensionRatio="5:1"
                             app:layout_constraintStart_toStartOf="@+id/guideline_vertical_0.05"

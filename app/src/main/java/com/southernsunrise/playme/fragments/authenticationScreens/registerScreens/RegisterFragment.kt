@@ -136,13 +136,14 @@ class RegisterFragment : Fragment(), UserRegisterInterface {
             auth.createUserWithEmailAndPassword(it, userPassword)
                 .addOnCompleteListener(requireActivity()) { task ->
                     if (task.isSuccessful) {
-                        // Sign in success, update UI with the signed-in user's information
+                        // Sign in success
                         Log.d(TAG, "createUserWithEmail:success")
                         firebaseUser = auth.currentUser
                         user.userID = firebaseUser?.uid
                         createUserAvatarAndUploadToCloudStorage()
                     } else {
-                        // If sign in fails, display a message to the user.
+                        // If sign in fails, hide loading layer and log the message
+                        (requireActivity() as MainActivity).showLoadingLayer(false)
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
                         Toast.makeText(
                             requireContext(), "Authentication failed.",
