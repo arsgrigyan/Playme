@@ -61,7 +61,6 @@ dependencies {
     // Import the Firebase BoM
     implementation platform('com.google.firebase:firebase-bom:31.2.0')
 
-    //Add the dependencies for Firebase products you want to use
     // When using the BoM, don't specify versions in Firebase dependencies
     implementation 'com.google.firebase:firebase-analytics-ktx'
 
@@ -116,8 +115,6 @@ dependencies {
 
     //textDrawable
     implementation 'com.github.adwardstark:materialtextdrawable-for-android:1.0.0'
-
-    //implementation 'com.amulyakhare:com.amulyakhare.textdrawable:1.0.1'
 
 
 }

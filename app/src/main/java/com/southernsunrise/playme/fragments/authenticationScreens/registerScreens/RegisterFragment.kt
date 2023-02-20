@@ -4,6 +4,7 @@ import android.annotation.SuppressLint
 import android.graphics.drawable.BitmapDrawable
 import android.net.Uri
 import android.os.Bundle
+import android.text.Layout.Directions
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -12,6 +13,7 @@ import android.widget.Toast
 import android.widget.Toolbar
 import androidx.core.graphics.drawable.toBitmap
 import androidx.fragment.app.Fragment
+import androidx.navigation.NavDirections
 import androidx.navigation.fragment.findNavController
 import com.adwardstark.mtextdrawable.MaterialTextDrawable
 import com.google.android.gms.tasks.Task
@@ -146,7 +148,7 @@ class RegisterFragment : Fragment(), UserRegisterInterface {
                         (requireActivity() as MainActivity).showLoadingLayer(false)
                         Log.w(TAG, "createUserWithEmail:failure", task.exception)
                         Toast.makeText(
-                            requireContext(), "Authentication failed.",
+                            requireContext(), "Authentication failed: ${task.exception?.message}",
                             Toast.LENGTH_SHORT
                         ).show()
                     }
@@ -226,7 +228,7 @@ class RegisterFragment : Fragment(), UserRegisterInterface {
 
 
     private fun navigateToMainFragment() {
-        this.findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
+       this.findNavController().navigate(R.id.action_registerFragment_to_mainFragment)
     }
 
 
